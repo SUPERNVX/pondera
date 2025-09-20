@@ -1,0 +1,12 @@
+react-dom_client.js?v=80e1367c:17995 Download the React DevTools for a better development experience: https://react.dev/link/react-devtools
+exportUtils.ts:72 Uncaught (in promise) TypeError: doc.autoTable is not a function
+    at exportUtils.ts:72:18
+    at Array.forEach (<anonymous>)
+    at exportAsPDF (exportUtils.ts:45:17)
+    at handleExportPDF (ResultsPage.tsx:71:11)
+    at executeDispatch (react-dom_client.js?v=80e1367c:11736:11)
+    at runWithFiberInDEV (react-dom_client.js?v=80e1367c:1485:72)
+    at processDispatchQueue (react-dom_client.js?v=80e1367c:11772:37)
+    at react-dom_client.js?v=80e1367c:12182:11
+    at batchedUpdates$1 (react-dom_client.js?v=80e1367c:2628:42)
+    at dispatchEventForPluginEventSystem (react-dom_client.js?v=80e1367c:11877:9)

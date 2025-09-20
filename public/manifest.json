@@ -1,0 +1,27 @@
+{
+  "short_name": "Pondera",
+  "name": "Pondera - Calculadora de GPA",
+  "description": "Converta suas notas do ensino médio brasileiro para o sistema GPA americano",
+  "icons": [
+    {
+      "src": "vite.svg",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "logo192.webp",
+      "type": "image/webp",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.webp",
+      "type": "image/webp",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#4f46e5",
+  "background_color": "#ffffff",
+  "lang": "pt-BR"
+}
