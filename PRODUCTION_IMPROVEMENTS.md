@@ -3,23 +3,48 @@
 ## 🔥 CRÍTICO - Deploy Issues (RESOLVER IMEDIATAMENTE)
 
 ### GitHub Pages Deploy Fix
-**Problema:** Tela branca com erros 404 no console
-**Causa:** Configuração incorreta do Vite para GitHub Pages
+**Problema:** Jekyll está tentando processar uma aplicação Vite/React
+**Causa:** GitHub Pages usando Jekyll por padrão para SPAs
 
-**Solução:**
-```typescript
-// vite.config.ts - Adicionar configuração de base
-export default defineConfig({
-  base: '/pondera/', // ou '/nome-do-repositorio/'
-  // ... resto da configuração
-})
+**✅ SOLUÇÃO IMPLEMENTADA:**
+
+**1. GitHub Actions Workflow Criado:**
+```yaml
+# .github/workflows/deploy.yml
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    - Setup Node 20
+    - Install dependencies (npm ci)
+    - Build (npm run build)
+    - Upload dist/ folder
+    
+  deploy:
+    - Deploy to GitHub Pages using actions/deploy-pages@v4
 ```
 
-**Alternativamente, para deployment automático:**
+**2. Arquivo .nojekyll Criado:**
+```
+# public/.nojekyll (arquivo vazio)
+# Desabilita processamento Jekyll
+```
+
+**3. Vite Configuration Otimizada:**
 ```typescript
-// Configuração dinâmica baseada no ambiente
+// vite.config.ts - Base path configurado
 base: process.env.NODE_ENV === 'production' ? '/pondera/' : '/',
 ```
+
+**PRÓXIMOS PASSOS:**
+1. Fazer commit e push dos novos arquivos
+2. Ir para Settings > Pages no GitHub
+3. Selecionar "GitHub Actions" como source
+4. O deploy será automático a cada push
 
 ### PWA Manifest Fix
 **Problema:** Paths incorretos para ícones
