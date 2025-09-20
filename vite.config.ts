@@ -5,6 +5,7 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: process.env.NODE_ENV === 'production' ? '/pondera/' : '/',
   plugins: [
     react(),
     VitePWA({
@@ -21,7 +22,7 @@ export default defineConfig({
         display: 'standalone',
                 icons: [
           {
-            src: 'public/vite.svg',
+            src: './vite.svg',
             sizes: 'any',
             type: 'image/svg+xml',
           },
