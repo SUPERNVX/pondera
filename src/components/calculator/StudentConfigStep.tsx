@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import useGPAStore from '@/stores/gpaStore';
+import useGPAStore from '../../stores/gpaStore';
 import { useTranslation } from 'react-i18next';
-import { cn } from '@/lib/utils';
+import { cn } from '../../lib/utils';
 
 const StudentConfigStep: React.FC = () => {
   const { t } = useTranslation();

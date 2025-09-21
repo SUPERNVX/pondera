@@ -1,8 +1,8 @@
 import jsPDF from 'jspdf';
 import { autoTable } from 'jspdf-autotable';
 
-import useGPAStore from '@/stores/gpaStore';
-import type { GPAStore } from '@/stores/gpaStore';
+import useGPAStore from '../stores/gpaStore';
+import type { GPAStore } from '../stores/gpaStore';
 import type { YearlyRecord, SubjectGrade, YearlyGPA } from './gpaTypes';
 
 interface jsPDFWithAutoTable extends jsPDF {

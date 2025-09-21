@@ -2,10 +2,10 @@ import { create } from 'zustand';
 import type { StateCreator } from 'zustand';
 import { subscribeWithSelector } from 'zustand/middleware';
 import { persist } from 'zustand/middleware';
-import type { Student, SubjectGrade, YearlyRecord, GPACalculation } from '@/utils/gpaTypes';
-import { calculateCumulativeGPA } from '@/utils/gpaCalculator';
-import { gradeToGPA } from '@/utils/gradeUtils';
-import { getSubjectsForYear, createSubjectGrades } from '@/utils/defaultSubjects';
+import type { Student, SubjectGrade, YearlyRecord, GPACalculation } from '../utils/gpaTypes';
+import { calculateCumulativeGPA } from '../utils/gpaCalculator';
+import { gradeToGPA } from '../utils/gradeUtils';
+import { getSubjectsForYear, createSubjectGrades } from '../utils/defaultSubjects';
 
 // Performance cache interface
 interface PerformanceCache {

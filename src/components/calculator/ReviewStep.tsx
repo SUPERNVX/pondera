@@ -1,7 +1,7 @@
 import React from 'react';
-import useGPAStore from '@/stores/gpaStore';
+import useGPAStore from '../../stores/gpaStore';
 import { useTranslation } from 'react-i18next';
-import { getSystemLabel, getScaleLabel, getTypeLabel, getLevelLabel } from '@/utils/labelUtils';
+import { getSystemLabel, getScaleLabel, getTypeLabel, getLevelLabel } from '../../utils/labelUtils';
 
 const ReviewStep: React.FC = () => {
   const { t } = useTranslation();

@@ -1,6 +1,6 @@
 import React from 'react';
 import { lightColors } from '../styles/colors';
-import { cn } from '@/lib/utils';
+import { cn } from '../lib/utils';
 
 interface SectionTitleProps {
   children: React.ReactNode;

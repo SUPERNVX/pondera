@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import useGPAStore from '@/stores/gpaStore';
-import { calculateSubjectGradesAndGPA } from '@/utils/gpaCalculator';
-import { validateGrade } from '@/utils/gradeUtils';
+import useGPAStore from '../../stores/gpaStore';
+import { calculateSubjectGradesAndGPA } from '../../utils/gpaCalculator';
+import { validateGrade } from '../../utils/gradeUtils';
 import { useTranslation } from 'react-i18next';
-import { cn } from '@/lib/utils';
-import { gradeToGPA } from '@/utils/gradeUtils';
+import { cn } from '../../lib/utils';
+import { gradeToGPA } from '../../utils/gradeUtils';
 
 const GradeEntryStep: React.FC = () => {
   const { t } = useTranslation();

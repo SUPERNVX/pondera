@@ -9,7 +9,7 @@ import { usePerformanceSettings } from '../stores/settingsStore';
 import { useOptimizedYearRecord, useYearStatistics, useFilteredSubjects } from '../hooks/useOptimizedSelectors';
 import { getSubjectsForYear, createSubjectGrades } from '../utils/defaultSubjects';
 import { useAnimations } from '../hooks/useAnimations';
-import type { SubjectGrade } from '@/utils/gpaTypes';
+import type { SubjectGrade } from '../utils/gpaTypes';
 
 interface CalculatorPageProps {
   colors?: typeof lightColors;
