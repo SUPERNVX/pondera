@@ -1,5 +1,10 @@
-Error: src/hooks/useOptimizedSelectors.ts(161,16): error TS2503: Cannot find namespace 'NodeJS'.
-Error: vite.config.ts(4,18): error TS2307: Cannot find module 'path' or its corresponding type declarations.
-Error: vite.config.ts(8,9): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
-Error: vite.config.ts(38,25): error TS2304: Cannot find name '__dirname'.
-Error: Process completed with exit code 1.
+vendor-CMyWlrgS.js:18 No routes matched location "/pondera/" 
+j @ vendor-CMyWlrgS.js:18
+vendor-CMyWlrgS.js:18 No routes matched location "/pondera/" 
+j @ vendor-CMyWlrgS.js:18
+reporting.js:33 WTM Reporting: failed to record context from mousedown
+getContextHTML @ reporting.js:33
+vendor-CMyWlrgS.js:18 No routes matched location "/pondera/" 
+j @ vendor-CMyWlrgS.js:18
+reporting.js:33 WTM Reporting: failed to record context from mousedown
+getContextHTML @ reporting.js:33
