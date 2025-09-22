@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import DashboardPage from './pages/DashboardPage';
-
 import CalculatorPage from './pages/CalculatorPage';
 import ResultsPage from './pages/ResultsPage';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
+import Footer from './components/Footer';
 import { ThemeToggle } from './components/ui/theme-toggle';
 import { lightColors, darkColors } from './styles/colors';
 import { usePageAnimations } from './hooks/useAnimations';
@@ -112,10 +114,13 @@ const AppContent: React.FC = () => {
         <Routes>
           <Route path="/" element={<HomePage setPage={setPage} colors={colors} />} />
           <Route path="/dashboard" element={<DashboardPage colors={colors} />} />
-          
           <Route path="/calculator" element={<CalculatorPage colors={colors} />} />
           <Route path="/results" element={<ResultsPage colors={colors} />} />
+          <Route path="/privacy" element={<PrivacyPolicy colors={colors} />} />
+          <Route path="/terms" element={<TermsOfService colors={colors} />} />
         </Routes>
+        
+        {!isHomePage && <Footer colors={colors} />}
       </div>
     </div>
   );

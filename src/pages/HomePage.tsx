@@ -149,7 +149,7 @@ const HomePage: React.FC<HomePageProps> = ({ setPage, colors }) => {
             pointerEvents: 'none'
           }}>
             <img 
-              src="/logo.webp" 
+              src="./logo.webp" 
               alt="Pondera Logo" 
               style={{
                 width: '120px',
