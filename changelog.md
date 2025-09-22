@@ -2,6 +2,56 @@
 
 All notable changes to the Pondera project are documented in this file.
 
+## [2.1.0] - 2024-03-21 - Legal Compliance & Error Handling Release
+
+### 🔒 Critical Security & Legal Features
+- **Privacy Policy & Terms of Service** - Complete LGPD/GDPR compliance
+- **Error Boundaries** - Production-grade error handling with recovery
+- **Footer Component** - Legal pages navigation
+- **Logo Path Fix** - Corrected GitHub Pages asset loading
+
+### ✨ Added
+- **Privacy Policy Page** (`src/pages/PrivacyPolicy.tsx`)
+  - Complete LGPD/GDPR compliance documentation
+  - Client-side data processing transparency
+  - User rights and data protection details
+- **Terms of Service Page** (`src/pages/TermsOfService.tsx`)
+  - Comprehensive service terms and limitations
+  - User responsibilities and disclaimers
+  - Intellectual property and liability coverage
+- **Error Boundary System** (`src/components/ErrorBoundary.tsx`)
+  - Global and route-level error protection
+  - Professional error fallback UI with recovery options
+  - Development mode debugging with technical details
+  - Production-ready error logging preparation
+- **Footer Component** (`src/components/Footer.tsx`)
+  - Legal pages navigation links
+  - Copyright information
+  - Responsive design with theme support
+
+### 🌍 Internationalization
+- **130+ new translation keys** added for legal pages
+- **Error handling translations** in Portuguese and English
+- **Legal terminology** properly localized for both languages
+
+### 🛠️ Technical Improvements
+- **Logo path resolution** using `import.meta.env.BASE_URL` for GitHub Pages
+- **TypeScript compliance** with proper type imports
+- **Error logging framework** prepared for production monitoring
+- **Route protection** with nested error boundaries
+
+### 📱 User Experience
+- **Professional error recovery** with "Try Again" and "Back to Home" options
+- **Help instructions** for users when errors occur
+- **Legal transparency** with easily accessible privacy and terms pages
+- **Consistent theming** across all new components
+
+### 🔧 Bug Fixes
+- **Logo loading** on GitHub Pages deployment
+- **Navigation consistency** across all routes
+- **TypeScript errors** in ErrorBoundary component
+- **Asset path resolution** for production builds
+
 ## [2.0.0] - 2024-03-20 - Production Ready Release
 
 ### 🚀 Major Updates

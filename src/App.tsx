@@ -7,6 +7,7 @@ import ResultsPage from './pages/ResultsPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import Footer from './components/Footer';
+import ErrorBoundary from './components/ErrorBoundary';
 import { ThemeToggle } from './components/ui/theme-toggle';
 import { lightColors, darkColors } from './styles/colors';
 import { usePageAnimations } from './hooks/useAnimations';
@@ -111,14 +112,16 @@ const AppContent: React.FC = () => {
           </nav>
         </header>
 
-        <Routes>
-          <Route path="/" element={<HomePage setPage={setPage} colors={colors} />} />
-          <Route path="/dashboard" element={<DashboardPage colors={colors} />} />
-          <Route path="/calculator" element={<CalculatorPage colors={colors} />} />
-          <Route path="/results" element={<ResultsPage colors={colors} />} />
-          <Route path="/privacy" element={<PrivacyPolicy colors={colors} />} />
-          <Route path="/terms" element={<TermsOfService colors={colors} />} />
-        </Routes>
+        <ErrorBoundary colors={colors}>
+          <Routes>
+            <Route path="/" element={<HomePage setPage={setPage} colors={colors} />} />
+            <Route path="/dashboard" element={<DashboardPage colors={colors} />} />
+            <Route path="/calculator" element={<CalculatorPage colors={colors} />} />
+            <Route path="/results" element={<ResultsPage colors={colors} />} />
+            <Route path="/privacy" element={<PrivacyPolicy colors={colors} />} />
+            <Route path="/terms" element={<TermsOfService colors={colors} />} />
+          </Routes>
+        </ErrorBoundary>
         
         {!isHomePage && <Footer colors={colors} />}
       </div>
@@ -129,7 +132,9 @@ const AppContent: React.FC = () => {
 const App: React.FC = () => {
   return (
     <Router basename="/pondera">
-      <AppContent />
+      <ErrorBoundary>
+        <AppContent />
+      </ErrorBoundary>
     </Router>
   );
 };

@@ -254,6 +254,16 @@ const resources = {
       "governing_law_title": "Lei Aplicável",
       "governing_law_desc": "Estes termos são regidos pelas leis do Brasil. Disputas serão resolvidas nos tribunais brasileiros competentes.",
       "all_rights_reserved": "Todos os direitos reservados",
+      
+      // Error Boundary
+      "error_boundary_title": "Ops! Algo deu errado",
+      "error_boundary_description": "Ocorreu um erro inesperado na aplicação. Não se preocupe, seus dados estão seguros e salvos localmente.",
+      "technical_details": "Detalhes Técnicos",
+      "try_again": "Tentar Novamente",
+      "error_boundary_help": "O que você pode fazer",
+      "refresh_page": "Atualizar a página (F5)",
+      "clear_browser_data": "Limpar dados do navegador",
+      "try_different_browser": "Tentar em outro navegador",
     }
   },
   en: {
@@ -507,6 +517,16 @@ const resources = {
       "governing_law_title": "Governing Law",
       "governing_law_desc": "These terms are governed by Brazilian law. Disputes will be resolved in competent Brazilian courts.",
       "all_rights_reserved": "All rights reserved",
+      
+      // Error Boundary
+      "error_boundary_title": "Oops! Something went wrong",
+      "error_boundary_description": "An unexpected error occurred in the application. Don't worry, your data is safe and saved locally.",
+      "technical_details": "Technical Details",
+      "try_again": "Try Again",
+      "error_boundary_help": "What you can do",
+      "refresh_page": "Refresh the page (F5)",
+      "clear_browser_data": "Clear browser data",
+      "try_different_browser": "Try a different browser",
     }
   }
 };
