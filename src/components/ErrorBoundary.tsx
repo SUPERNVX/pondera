@@ -61,7 +61,7 @@ const ErrorFallback: React.FC<{
           {t('error_boundary_description')}
         </p>
 
-        {process.env.NODE_ENV === 'development' && error && (
+        {import.meta.env.DEV && error && (
           <details style={{
             backgroundColor: colors.background,
             padding: '1rem',
@@ -187,7 +187,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     };
   }
 
-  static getDerivedStateFromError(_error: Error): Partial<ErrorBoundaryState> {
+  static getDerivedStateFromError(): Partial<ErrorBoundaryState> {
     // Update state so the next render will show the fallback UI
     return { hasError: true };
   }
@@ -202,7 +202,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     });
 
     // Send error to logging service in production
-    if (process.env.NODE_ENV === 'production') {
+    if (import.meta.env.PROD) {
       this.logErrorToService(error, errorInfo);
     }
   }
