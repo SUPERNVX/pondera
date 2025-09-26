@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { flushSync } from 'react-dom';
 import { lightColors, darkColors } from '../../styles/colors';
+import { useAnalytics } from '../../hooks/useAnalytics';
 
 interface ThemeToggleProps {
   theme: 'light' | 'dark';
@@ -10,8 +11,12 @@ interface ThemeToggleProps {
 export const ThemeToggle: React.FC<ThemeToggleProps> = ({ theme, onToggle }) => {
   const colors = theme === 'dark' ? darkColors : lightColors;
   const buttonRef = useRef<HTMLButtonElement | null>(null);
+  const { trackUserPreference } = useAnalytics();
   
   const changeTheme = async () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    trackUserPreference('theme', newTheme);
+
     if (!buttonRef.current) {
       onToggle();
       return;

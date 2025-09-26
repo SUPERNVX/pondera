@@ -264,6 +264,15 @@ const resources = {
       "refresh_page": "Atualizar a página (F5)",
       "clear_browser_data": "Limpar dados do navegador",
       "try_different_browser": "Tentar em outro navegador",
+      
+      // Cookie Consent
+      "cookie_consent_title": "Consentimento de Cookies",
+      "cookie_consent_description": "Utilizamos cookies essenciais para garantir o funcionamento adequado do Pondera. Estes cookies são necessários para salvar suas preferências e dados localmente.",
+      "essential_cookies_title": "Cookies Essenciais",
+      "essential_cookies_description": "Salvam suas configurações de idioma, tema e dados acadêmicos no seu navegador. Sem eles, você perderia suas informações a cada visita.",
+      "accept_cookies": "Aceitar Cookies",
+      "decline_cookies": "Recusar",
+      "learn_more_cookies": "Saber Mais",
     }
   },
   en: {
@@ -527,6 +536,15 @@ const resources = {
       "refresh_page": "Refresh the page (F5)",
       "clear_browser_data": "Clear browser data",
       "try_different_browser": "Try a different browser",
+      
+      // Cookie Consent
+      "cookie_consent_title": "Cookie Consent",
+      "cookie_consent_description": "We use essential cookies to ensure Pondera works properly. These cookies are necessary to save your preferences and data locally.",
+      "essential_cookies_title": "Essential Cookies",
+      "essential_cookies_description": "Save your language settings, theme, and academic data in your browser. Without them, you would lose your information with each visit.",
+      "accept_cookies": "Accept Cookies",
+      "decline_cookies": "Decline",
+      "learn_more_cookies": "Learn More",
     }
   }
 };

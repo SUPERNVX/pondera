@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { lightColors } from '../styles/colors';
+import { useAnalytics } from '../hooks/useAnalytics';
 
 interface TermsOfServiceProps {
   colors?: typeof lightColors;
@@ -8,6 +9,11 @@ interface TermsOfServiceProps {
 
 const TermsOfService: React.FC<TermsOfServiceProps> = ({ colors = lightColors }) => {
   const { t } = useTranslation();
+  const { trackLegalPageView } = useAnalytics();
+
+  useEffect(() => {
+    trackLegalPageView('terms');
+  }, [trackLegalPageView]);
 
   return (
     <div style={{ 

@@ -1,11 +1,15 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useAnalytics } from '../../hooks/useAnalytics';
 
 export const LanguageSelector: React.FC = () => {
   const { t, i18n } = useTranslation();
+  const { trackUserPreference } = useAnalytics();
 
   const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    i18n.changeLanguage(e.target.value);
+    const newLanguage = e.target.value;
+    trackUserPreference('language', newLanguage);
+    i18n.changeLanguage(newLanguage);
   };
 
   return (

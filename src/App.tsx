@@ -8,7 +8,9 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import Footer from './components/Footer';
 import ErrorBoundary from './components/ErrorBoundary';
+import CookieConsent from './components/CookieConsent';
 import { ThemeToggle } from './components/ui/theme-toggle';
+import { usePerformanceMonitoring } from './hooks/usePerformanceMonitoring';
 import { lightColors, darkColors } from './styles/colors';
 import { usePageAnimations } from './hooks/useAnimations';
 import './styles/global.css';
@@ -24,6 +26,9 @@ const AppContent: React.FC = () => {
   
   // Initialize page animations
   usePageAnimations();
+  
+  // Initialize performance monitoring
+  usePerformanceMonitoring();
 
   const colors = isDarkMode ? darkColors : lightColors;
 
@@ -124,6 +129,9 @@ const AppContent: React.FC = () => {
         </ErrorBoundary>
         
         {!isHomePage && <Footer colors={colors} />}
+        
+        {/* Cookie Consent Banner */}
+        <CookieConsent colors={colors} />
       </div>
     </div>
   );
